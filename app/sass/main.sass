@@ -1,0 +1,769 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+h1,h2,p
+	margin: 0
+	padding: 0
+a
+	color: #ffffff
+	text-decoration: none
+	&:hover,&:active,&:focus
+		color: #ffffff
+		text-decoration: none
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: #ffffff
+	background-color: $accent
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.logo_block
+	display: flex
+	flex-direction: row
+	align-items: center
+	padding: 30px 0
+.logo_img
+	width: 80px
+	margin-right: 20px
+.logo_text
+	line-height: 1
+	h1
+		margin-bottom: 15px
+		font-size: 2em
+	p
+		font-size: .9em
+		font-weight: 500
+.sponsors_line
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+	align-items: center
+.nav_line
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	border-top: 1px solid #868A96
+.nav_item
+	padding: 25px 0
+	display: block
+	color: #fff
+	margin-right: 25px
+	font-size: 0.9em
+	font-weight: bold
+	transition: all .3s ease
+	&:last-child
+		margin-right: 0
+	&:hover
+		text-decoration: none
+		color: $red
+	&.active
+		background-color: $red
+		&:hover
+			text-decoration: none
+			color: #fff
+.is_squad,.is_trainer
+	.overlay_accent
+		justify-content: flex-end
+	.tag
+		margin: 0 auto
+		display: block
+		width: 100px
+		font-size: 0.9em
+		padding: 10px 0
+		margin-bottom: 60px
+		text-align: center
+	.section_header
+		text-align: center
+		margin-bottom: 160px
+.sponsor_link,.lang_block
+	padding: 25px 
+	display: block
+	border-left: 1px solid #868A96
+.lang_block
+	border-right: 1px solid #868A96
+	font-size: 0.9em
+	font-weight: bold
+	line-height: 3
+	padding: 25px 40px
+	cursor: pointer
+.arrow_ico
+	width: 15px
+	margin-left: 15px
+.main_article
+	min-height: 70vh
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	background-position: center
+.overlay_accent
+	position: absolute
+	left: 0
+	top: 0
+	bottom: 0
+	right: 0
+	background-color: rgba($accent,.8)
+	display: flex
+	flex-direction: column
+	justify-content: center
+.tag
+	color: #ffffff
+	font-size: .9em
+	padding: 10px 30px
+	background-color: $red
+	margin-bottom: 35px
+	display: inline-block
+.section_header
+	font-size: 3em
+	line-height: 1.2
+	font-family: "gotham-b",sans-serif
+	margin-bottom: 30px
+.magnifier_ico
+	width: 20px
+.more
+	font-size: 1em
+	color: #fff
+	font-weight: 600
+	span
+		position: relative
+		padding-bottom: 5px
+		&:after
+			content: ""
+			position: absolute
+			transition: all .3s ease
+			bottom: 0
+			right: 0
+			height: 2px
+			width: 0%
+			display: inline-block
+			background-color: $red
+	&:hover span:after
+		width: 100%
+.matches
+	padding: 0
+	position: relative
+	.container
+		position: relative
+	.header_container
+		position: absolute
+		padding-top: 70px
+		z-index: 1
+		top: 0
+		left: 0
+.match_item
+	padding-top: 220px
+	padding-bottom: 70px
+	&:nth-child(odd)
+		background-color: #091932
+.match_header,.match_place,.match_date
+	text-align: center
+	font-size: 0.9em
+	letter-spacing: 3px
+.match_header
+	margin-bottom: 15px
+.match_place
+	margin-top: 40px
+.match_count
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+.team_logo
+	width: 30%
+.team_img
+	height: 80px
+	display: block
+	margin: 0 auto
+	margin-bottom: 15px
+.team_name
+	font-size: 1em
+	font-weight: bold
+	text-align: center
+	height: 1em
+.match_points
+	font-size: 2em
+	font-family: "gotham-b",sans-serif
+	flex-grow: 1
+	text-align: center
+.divider
+	margin: 0 10px
+.video_preview
+	width: 100%
+.light_bg
+	background-color: #fff
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+.video_container
+	position: relative
+	width: 50%
+.video_overlay
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: rgba($accent,.8)
+.video_descr
+	max-width: 280px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: flex-start
+	.tag
+		margin-bottom: 20px
+.play_btn 
+	width: 100px
+	height: 100px
+	border-radius: 50%
+	cursor: pointer
+	outline: none
+	border: 3px solid #fff
+	background-color: rgba(255,255,255,.5)
+	margin-bottom: 30px
+	position: relative
+	img
+		width: 20px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+.video_header
+	font-size: 1.6em
+	font-family: "gotham-b",sans-serif
+	margin-bottom: 30px
+.statistic
+	padding: 90px 0
+	.section_header,.more
+		color: $accent
+.statistic_header
+	text-align: right
+	margin-bottom: 50px
+.card_header
+	background-color: $red
+	padding: 30px
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	color: #fff
+	p
+		font-size: 1.2em
+	.more_card
+		color: #ffffff
+		font-size: 0.8em
+		font-weight: 500
+	.more span:after
+		background-color: #fff
+.card_body 
+	.match_item
+		padding: 60px 0
+		background-color: #f1f1f1
+		color: $accent
+.player_card_body
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 285px
+	background-position: center
+	position: relative
+	.player_info
+		position: absolute
+		padding: 10px
+		width: 130px
+		min-height: 170px
+		left: 25px
+		top: 50%
+		transform: translateY(-50%)
+		.player_number
+			font-size: 5em
+		.player_name
+			font-size: 0.9em
+		.player_spec
+			font-size: 0.8em
+			text-transform: lowercase
+.player_item
+	margin-bottom: 50px
+.players_grid
+	padding: 50px 15px
+	.main_card_header
+		padding-left: 20px
+	.logo_block
+		padding: 15px 0
+	.logo_img
+		width: 40px
+	.logo_text
+		h1
+			font-size: 0.8em
+			margin-bottom: 5px
+		p
+			font-size: 0.5em
+.main_card_body
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 485px
+	background-position: center
+	position: relative
+	.player_info
+		position: absolute
+		left: 45px
+		top: 50%
+		transform: translateY(-50%)
+.main_card_header
+	background-color: $red
+	padding-left: 50px
+.main_card
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	box-shadow: 7px 6px 9px -1px rgba(0,0,0,.45)
+.right_column
+	padding: 50px 40px
+	padding-top: 5px
+	background-image: url(../img/player_info_bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+.main_player_info_header
+	font-size: 1.5em
+	font-weight: bold
+	text-align: center
+	letter-spacing: 6px
+	margin-bottom: 50px
+.player_data
+	background-color: rgba(#2C1817,.6)
+	padding: 25px
+	margin-bottom: 40px
+	padding-top: 10px
+
+.left_column
+	width: 65%
+.right_column
+	width: 35%
+.best_player_card .card_body
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	height: 325px
+	padding-left: 30px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: flex-start
+.player_info
+	padding: 30px 40px 25px 20px
+	background-color: $red
+	display: inline-block
+	width: 200px
+.team_gallery
+	background-color: #f1f1f1
+	.players_grid
+		margin-top: -100px
+		position: relative
+	.container
+		background-color: #fff
+
+.trainer_card_body
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 545px
+	position: relative
+.trainer_info
+	position: absolute
+	left: 0
+	bottom: 0
+	min-width: 50%
+.trainer_grid
+	padding: 50px
+	position: relative
+	margin-top: -100px
+.trainer_stuff
+	background-color: $red
+	color: #fff
+	text-align: center
+	font-weight: 700
+	font-size: 1.3em
+	padding: 0 20px
+.trainer_card_header
+	background-color: $accent
+	padding: 10px 35px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.logo_block
+		padding: 0
+		display: inline-block
+		.logo_img
+			margin: 0
+			width: 60px
+.trainer_card_place
+	margin-bottom: 25px
+.trainer_name_wrapper
+	font-size: 1.8em
+.trainer_sure_name
+	font-weight: bold
+.main_card_wrapper
+	padding: 60px 0
+	margin-top: -100px
+	z-index: 2
+.player_number
+	font-size: 8em
+	color: #F24F61
+	font-family: "gotham-b",sans-serif
+	text-align: left
+	line-height: 1
+.player_name
+	font-family: "gotham-b",sans-serif
+	font-size: 1.5em
+.card
+	margin-bottom: 10px
+	box-shadow: 7px 6px 9px -1px rgba(0,0,0,0.45)
+
+.championship_table
+	color: #000
+	.card_body
+		padding: 30px 0
+	.commands_table
+		width: 100%
+	.table_header
+		font-size: 1.5em
+		font-weight: bold
+		color: #000
+		border-top: none
+		th:first-child
+			padding-left: 50px
+	tr
+		height: 60px
+		border-top: 1px solid #D5D5D5
+		td:first-child
+			font-weight: bold
+			padding-left: 50px
+		td:last-child
+			padding-right: 30px
+		td
+			font-weight: 500
+.team_ico
+	width: 40px
+	margin-right: 25px
+.gallery_section
+	padding: 100px 0
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+.slide_header
+	background: $red
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	padding: 25px
+.slide_name
+	font-weight: 600
+	font-size: 0.7em
+.slide_date
+	font-weight: 600
+	font-size: 0.6em
+	text-decoration: underline
+.gallery_container
+	margin-top: 55px
+
+.sponsors_section
+	background-color: #f1f1f1
+	padding: 70px 0
+.sponsors_header
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 100% 3px
+.sponsors_header_logo
+	width: 100%
+	max-width: 350px
+	margin: 0 auto
+	padding: 20px 110px
+	background-color: #f1f1f1
+	img
+		width: 150px
+.sponsors_logo_filter
+	filter: grayscale(1)
+	transform: scale(.9)
+	transition: all .5s ease
+	margin: 0 auto
+	&:hover
+		transform: scale(1)
+		filter: grayscale(0)
+.top_row
+	margin: 100px 0
+.decor_rect
+	width: 100px
+	height: 200px
+	background-color: $red
+	margin-bottom: 20px
+.is_article
+	.matches
+		background-color: #f1f1f1
+		padding-bottom: 50px
+.article_content
+	font-size: 1.7em
+	color: $accent
+	line-height: 1.2
+	p
+		margin-bottom: 45px
+		font-weight: 500
+	li
+		margin-bottom: 10px
+	.article_bold
+		font-weight: bold
+.error
+	margin-top: 200px
+	display: block
+	width: 100%
+	text-align: center
+.back_link
+	width: 200px
+	display: block
+	margin: 0 auto
+	background-color: $red
+	color: #fff
+	text-align: center
+	padding: 30px 0
+	margin-top: 40px
+.article_images
+	text-align: center
+	img
+		width: 30%
+.article_date
+	width: 40%
+	font-weight: bold
+	font-size: 1.7em
+	color: $accent
+	line-height: 1.2
+	padding-bottom: 20px
+	border-bottom: 1px solid $red
+	text-align: left
+	margin-bottom: 30px
+.footer
+	background-color: #D1D1D1
+	padding: 70px 0
+	position: relative
+.footer_item
+	max-width: 100px
+	font-size: 0.8em
+	text-align: left
+	a
+		color: $accent
+		display: block
+		line-height: 2
+		font-weight: 600
+	.footer_item_header
+		margin-bottom: 25px
+		font-size: 1em
+		font-weight: bold
+.footer_logo_text
+	color: #767678
+	font-size: 0.7em
+	margin-top: 15px
+.video_item.single
+	width: 500px
+	position: relative
+	margin: 0 auto
+	.video_post_descr
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 50%
+		background-color: #f1f1f1
+.video_post_descr
+	background-color: #f1f1f1
+	padding: 20px
+	box-sizing: content-box
+	.more
+		color: $accent
+		.magnifier_ico
+			width: 25px
+			display: inline-block
+
+.video_item_header
+	font-size: 1.5em
+	font-family: "gotham-b", sans-serif
+	text-align: left
+	color: $accent
+	line-height: 1.2
+	margin: 25px 0
+.video_item_tag
+	color: $accent
+	font-weight: 600
+.accent_text
+	font-weight: bold
+	color: $red
+.video_item.double
+	.video_post
+		display: flex
+		justify-content: center
+		align-items: stretch
+		margin-bottom: 50px
+		width: 485px
+	.video_post_img
+		width: 220px
+		height: 220px
+	.video_post_descr
+		max-height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		overflow: hidden
+		padding: 10px 30px
+		width: 60%
+	.video_item_header
+		font-size: 1.3em
+.video_section
+	position: relative		
+.video_gallery_container
+	position: absolute
+	width: 60%
+	top: 75px
+	right: 0
+	.owl-theme .owl-dots .owl-dot span
+		background-color: $accent
+	.owl-dots
+		position: absolute
+		left: -200px
+		bottom: -100px
+.owl-item
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+.matches 
+	.last_news
+		position: absolute
+		top: -110px
+		right: 0
+		width: 60%
+		.owl-dots
+			position: absolute
+			top: 0
+			left: -250px
+		.last_news_item
+			width: 520px
+			height: 220px
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: stretch
+		.last_news_img
+			width: 45%
+			height: 100%
+		.last_news_descr
+			background-color: $red
+			width: 60%
+			padding: 20px 30px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			.magnifier_ico
+				width: 20px
+				display: inline-block
+			.more span:after
+				background-color: #fff
+.last_news_tag
+	font-size: 0.7em
+.flag_wrapper
+	text-align: right
+	margin-bottom: 30px
+.coutry_flag
+	width: 32px
+.player_parameters,.player_bio,.player_statistic
+	display: flex
+	justify-content: flex-start
+.player_parameters
+	margin-bottom: 30px
+	border-bottom: 2px solid $red
+.player_height
+	margin-right: 40px
+.parameters_numbers
+	font-size: 2em
+	color: #fff
+	font-weight: 600
+	margin-right: 5px
+.bio_parameters
+	font-size: 0.9em
+	margin-right: 15px
+	p
+		line-height: 1.9
+.goals_count,.matches_count
+	width: 50%
+	text-align: center
+	padding: 15px 0
+	font-size: 0.6em
+	.points
+		font-size: 5em
+		font-weight: bold
+		line-height: 1
+.goals_count
+	background-color: rgba($accent,.8)
+.matches_count
+	background-color: rgba($red,.6)
+.bio_values
+	color: #fff
+	font-weight: bold
+	.accent
+		color: $red
+.player_data
+	color: #bbbbbb
+.last_news_header
+	font-size: 1.7em
+	font-family: "gotham-b", sans-serif
+	line-height: 1.2
+	margin-bottom: 15px
+.owl-theme .owl-dots .owl-dot span
+	border-radius: 0
+	width: 40px
+	height: 2px
+	background-color: #fff
+.owl-theme .owl-dots .owl-dot.active span
+	background-color: $red
+.top_line
+	.hamburger
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 5
+	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+		background-color: #fff
+	.hamburger-inner
+		width: 25px
+	.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+		background-color: #fff
+		width: 40px
+@import "media" // Always at the end

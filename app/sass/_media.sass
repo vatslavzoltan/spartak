@@ -1,0 +1,244 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+@media screen and (max-width: 1600px)
+	.video_item.single
+		width: 430px
+	.video_item.double .video_post
+		width: 430px
+		margin-bottom: 35px
+	.video_item.double .video_post_img
+		width: 200px
+		height: 200px
+	.video_item.double .video_item_header
+		font-size: 1em
+		line-height: 1
+		margin-top: 0
+	.video_gallery_container
+		width: 65%
+	.video_item_tag
+		font-size: 0.8em
+	.matches .last_news .last_news_descr
+		width: 75%
+	.matches .last_news .last_news_item
+		width: 400px
+		height: 180px
+	.last_news_header
+		font-size: 1em
++media-breakpoint-down(xl)
+	
++media-breakpoint-down(lg)
+	.logo_text
+		display: none
+	.video_gallery_container
+		position: initial
+		padding: 30px 0
+		width: 100%
+	.matches .last_news .last_news_item
+		width: 350px
+		height: 180px
+	.video_container
+		width: 100%
+	.last_news_tag
+		font-size: 0.8em
+
++media-breakpoint-down(md)
+	.trainer_name_wrapper
+		font-size: 1.5em
+	.trainer_card_body
+		min-height: 350px
+	body
+		font-size: 14px
+	.matches .last_news,.video_gallery_container
+		position: initial
+		padding: 30px 0
+		width: 100%
+	.matches .last_news .last_news_item
+		width: 350px
+		height: 180px
+	.last_news_header
+		font-size: 1.2em
+	.last_news_tag
+		font-size: 0.8em
+	.matches .last_news .owl-dots
+		left: 0
+	.video_container
+		width: 100%
+	.video_descr
+		align-items: center
+	.video_header
+		text-align: center
+	.video_item.single
+		width: 350px
+	.video_item.double .video_post
+		width: 350px
+		height: 150px
+	.video_item.double .video_post_img
+		width: 150px
+		height: auto
+	.video_item.double .video_item_header
+		font-size: 1em
+		margin: 10px 0
+	.video_gallery_container .owl-dots
+		left: 0
+		bottom: 0
+	.left_cards
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: stretch
+	.last_game_card
+		margin-right: 15px
+	.card_body .match_item
+		padding: 30px 0
+	.best_player_card .card_body
+		height: 285px
+		padding-left: 0
+	.card_header
+		padding: 30px 20px
+
++media-breakpoint-down(sm)
+	.matches .last_news .last_news_descr .magnifier_ico
+		width: 10px
+	.last_news_header
+		font-size: 1em
+	.last_news_tag
+		font-size: 0.6em
+	.trainer_card_header
+		padding: 10px
+	.trainer_stuff
+		font-size: 1em
+	.trainer_name_wrapper
+		font-size: 1.2em
+	.article_content
+		padding: 0 5px
+	.foter_logo
+		position: absolute
+		top: 0
+		left: 43%
+	.matches .last_news .last_news_item
+		width: 285px
+		height: 140px
+	.last_news_header
+		margin: 5px 0
+	body
+		font-size: 12px
+	.top_line
+		position: fixed
+		top: 0
+		width: 100%
+		z-index: 3
+		background: $accent
+		nav
+			display: none
+			background-color: $accent
+			position: fixed
+			left: 0
+			right: 0
+			bottom: 0
+			top: 0
+			&.active
+				display: block
+		.nav_line
+			flex-direction: column
+			margin-top: 85px
+			border: none
+		.nav_item
+			margin-right: 0
+			font-size: 1.5em
+			font-weight: 500
+			padding: 5px 0
+			display: block
+			width: 75%
+			text-align: center
+			border-bottom: 1px solid #fff
+			margin-top: 35px
+			
+		.sponsors_line
+			display: none
+	.logo_img
+		width: 40px
+		margin: 0
+	.logo_block
+		display: block
+		margin: 0 auto
+		padding: 10px 0
+	.matches .last_news
+		position: absolute
+		left: 0
+		right: 0
+	.matches .last_news .owl-dots
+		left: 0
+		right: 0
+	.main_article
+		height: 100vh
+	.matches .header_container
+		padding-top: 120px
+		left: 15px
+	.play_btn
+		width: 50px
+		height: 50px
+	.play_btn img
+		width: 15px
+		height: 15px
+	.video_descr .tag
+		display: none
+	.video_gallery_container .owl-dots
+		right: 0
+	.video_item.double .video_post
+		width: 325px
+	.left_cards
+		display: block
+	.last_game_card
+		margin-right: 0
+	.card_header
+		padding: 30px 5px
+	.championship_table tr td:first-child
+		padding-left: 20px
+	.sponsors_header_logo
+		padding: 20px 5px
+		max-width: 60px
+	.sponsors_header_logo img
+		width: 50px
+	.top_row
+		margin-top: 50px
+	.footer_item a
+		display: none
+	.footer_item .footer_item_header
+		display: block
+	.footer_item
+		max-width: 40px
+		&:last-child
+			max-width: 100px
+	.footer_logo_text
+		display: none
+	.top_line
+		.hamburger
+			display: block
+	.section_header
+		font-size: 2.7em
+	.statistic_header
+		padding-right: 15px
+	.owl-dots
+		height: 20px
+		overflow: hidden
++media-breakpoint-down(xs)
+	.top_line .nav_line
+		margin-top: 5px
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
++media-breakpoint-up(xl)
+
+@media screen and (max-height: 420px)
+	.main_article
+		height: 120vh
+	.top_line .nav_line
+		margin-top: 35px
+	.top_line .nav_item
+		margin-top: 5px
