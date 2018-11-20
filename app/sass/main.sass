@@ -104,6 +104,7 @@ body
 	.section_header
 		text-align: center
 		margin-bottom: 160px
+		
 .sponsor_link,.lang_block
 	padding: 25px
 	display: block
@@ -146,6 +147,7 @@ body
 	line-height: 1.2
 	font-family: "gotham-b",sans-serif
 	margin-bottom: 30px
+	text-transform: uppercase
 .magnifier_ico
 	width: 20px
 .more
@@ -665,6 +667,8 @@ body
 	flex-direction: column
 	justify-content: space-between
 	align-items: center
+.is_article .owl-item img
+	max-height: 250px
 .matches
 	.last_news
 		position: absolute
@@ -747,6 +751,7 @@ body
 	font-family: "gotham-b", sans-serif
 	line-height: 1.2
 	margin-bottom: 15px
+	text-transform: uppercase
 .owl-theme .owl-dots .owl-dot span
 	border-radius: 0
 	width: 40px
@@ -802,4 +807,34 @@ body
 		bottom: 0
 		width: 50%
 		border-left: 3px solid $red
+.is_calendar
+	.container
+		padding: 0
+	.main_article
+		background-position: center 100%
+	.card
+		margin: 0
+		box-shadow: none
+		.match_item
+			padding: 60px 15px
+	.calendar_item
+		&:nth-child(even)
+			.match_item
+				background-color: #dddddd 
+.year_calendar
+	width: 100%
+	text-align: center
+	font-size: 30px
+	color: #0d142c
+	padding: 45px 0
+	background-color: #fff
+	letter-spacing: 2px
+	font-weight: normal
+	text-transform: uppercase
+	&:before
+		content: ''
+		display: block
+		width: 100%
+		height: 50px
+		background-color: $red
 @import "media" // Always at the end
